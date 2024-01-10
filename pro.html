@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <title>array</title>
+    <style>
+      body {
+        direction: ltr;
+        margin:0;
+        padding: 7px;
+        background-image: url(image/fantasy-girly-wallpaper-17.jpg);
+      }
+      ul,
+      ol {
+        list-style: none;
+        margin: 0;
+        
+    
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+      }
+      li{
+        width: 17%;
+        }
+        img{
+          width: 189px;
+          height: auto;
+        }
+     
+        h1{
+          display: inline-block;
+          font-size: 20px;
+          color: rgb(0, 0, 0);
+          margin: 9px;
+        }
+        p{
+          margin: -7px;
+          padding: 11px;
+          color:#000;
+          font-size: 14px;
+        }
+        h3{
+          font-size: 30px;
+          font-weight: bold;
+          margin: 10px;
+        }
+        span img{
+          width: 23px;
+          height: auto;
+          padding: 0px 15px 0px 0px;
+        }
+     
+    </style>
+  </head>
+  <body>
+    <h3>The best</h3>
+    <ul class="list"></ul>
+    <script>
+      var list = document.querySelector(".List");
+      var films = 
+        {
+    "data": [{
+        "id": 161,
+        "title": "Munna Bhai M.B.B.S.",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0374887_poster.jpg",
+        "year": "2003",
+        "country": "India",
+        "imdb_rating": "8.3",
+        "genres": ["Comedy", "Drama"]
+    }, {
+        "id": 162,
+        "title": "The Big Lebowski",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0118715_poster.jpg",
+        "year": "1998",
+        "country": "USA, UK",
+        "imdb_rating": "8.2",
+        "genres": ["Comedy", "Crime", "Mystery"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0118715_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0118715_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0118715_screenshot3.jpg"]
+    }, {
+        "id": 163,
+        "title": "Tokyo Story",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0046438_poster.jpg",
+        "year": "1953",
+        "country": "Japan",
+        "imdb_rating": "8.3",
+        "genres": ["Drama"]
+    }, {
+        "id": 164,
+        "title": "Dial M for Murder",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0046912_poster.jpg",
+        "year": "1954",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Crime", "Film-Noir", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0046912_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0046912_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0046912_screenshot3.jpg"]
+    }, {
+        "id": 165,
+        "title": "The Deer Hunter",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0077416_poster.jpg",
+        "year": "1978",
+        "country": "UK, USA",
+        "imdb_rating": "8.2",
+        "genres": ["Drama", "History", "War"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0077416_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0077416_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0077416_screenshot3.jpg"]
+    }, {
+        "id": 166,
+        "title": "Trainspotting",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0117951_poster.jpg",
+        "year": "1996",
+        "country": "UK",
+        "imdb_rating": "8.2",
+        "genres": ["Drama"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0117951_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0117951_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0117951_screenshot3.jpg"]
+    }, {
+        "id": 167,
+        "title": "Gone with the Wind",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0031381_poster.jpg",
+        "year": "1939",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Drama", "History", "Romance"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0031381_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0031381_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0031381_screenshot3.jpg"]
+    }, {
+        "id": 168,
+        "title": "Fargo",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0116282_poster.jpg",
+        "year": "1996",
+        "country": "USA, UK",
+        "imdb_rating": "8.1",
+        "genres": ["Crime", "Drama", "Thriller"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0116282_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0116282_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0116282_screenshot3.jpg"]
+    }, {
+        "id": 169,
+        "title": "Finding Nemo",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0266543_poster.jpg",
+        "year": "2003",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Animation", "Adventure", "Comedy"],
+        "images": ["https:\/\/moviesapi.ir\/images\/tt0266543_screenshot1.jpg", "https:\/\/moviesapi.ir\/images\/tt0266543_screenshot2.jpg", "https:\/\/moviesapi.ir\/images\/tt0266543_screenshot3.jpg"]
+    }, {
+        "id": 170,
+        "title": "Cool Hand Luke",
+        "poster": "https:\/\/moviesapi.ir\/images\/tt0061512_poster.jpg",
+        "year": "1967",
+        "country": "USA",
+        "imdb_rating": "8.2",
+        "genres": ["Crime", "Drama"]
+    }],
+    "metadata": {
+        "current_page": "17",
+        "per_page": 10,
+        "page_count": 25,
+        "total_count": 250
+    }
+}
+      function renderGenres(genres ,element ){
+          genres.forEach(function (genre){
+            var p = document.createElement("p");
+              p.innerHTML = genre;
+              element.appendChild(p);
+          }) 
+          return element.innerHTML;
+        }
+      films.data.forEach(function(currentItem){
+        var li = document.createElement("LI");
+        li.innerHTML = `<br></br><img style="border-radius: 10px" src=${currentItem.poster} /><span 
+        class="title"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg"<span/><h1>${
+          currentItem.title
+        }</h1><p >${(currentItem.genres.toString())}</p><br></br>`;
+        list.appendChild(li)
+      });
+      function renderList(data,title){
+        var h2 = document.createElement("H2");
+        h2.innerHTML = title;
+        var contentBox =document.querySelector(".content");
+        
+      }
+    </script>
+  </body>
+</html>
